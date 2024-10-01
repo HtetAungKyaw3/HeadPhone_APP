@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGreen">#55CC00</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorYellow">#EEEE33</color>
+    <color name="colorCustomBlue">#003C9D</color>
+    <color name="colorCustomGreen">#99DD66</color>
+    <color name="colorCustomYellow">#CCBB00</color>
+    <color name="myTheme">#001E78</color>
+    <color name="inactive">#9B9B9B</color>
+
+    <!--    seekbar-->
+    <color name="colorProgress">#ffffbb33</color>
+    <color name="colorProgressDefault">#FFD7D7D7</color>
+    <color name="colorGreen50">#802ED184</color>
+    <color name="rsbColorSeekBarDefault">#c3c3c3</color>
+    <color name="rsbColorThumbPressed">#FFE7E7E7</color>
+    <color name="rsbColorThumbDefault">#FFFFFF</color>
+    <color name="rsbColorThumbBorder">#FFD7D7D7</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_000029">#00000029</color>
+    <color name="gray_C1C1CE">#C1C1CE</color>
+    <color name="blue_001E78">#001E78</color>
+    <color name="blue_001E78_50">#80001E78</color>
+    <color name="blue_001E78_20">#32001E78</color>
+    <color name="gray_EDEDED">#EDEDED</color>
+    <color name="gray_EDEDED_40">#66EDEDED</color>
+    <color name="blue_161653">#161653</color>
+    <color name="gray_777777">#777777</color>
+    <color name="gray_E6E6E5">#E6E6E5</color>
+    <color name="blue_01185D">#01185D</color>
+</resources>

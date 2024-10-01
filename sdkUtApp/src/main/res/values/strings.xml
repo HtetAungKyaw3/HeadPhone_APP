@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">Layfictone</string>
+    <string name="bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="unknown_device">Unknown device</string>
+
+    <string name="menu_scan">SCAN</string>
+    <string name="menu_stop">STOP</string>
+
+    <string-array name="role_array">
+        <item>Agent</item>
+        <item>Partner</item>
+    </string-array>
+    <string-array name="AntennaUT_rpt_time">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="AntennaUT_test_role">
+        <item>Agent</item>
+        <item>Partner</item>
+        <item>Both</item>
+    </string-array>
+    <string-array name="Key_Type">
+        <item>Double_Click</item>
+        <item>Triple_Click</item>
+        <item>Long_Press</item>
+    </string-array>
+    <string-array name="Double_Click_Key_Action">
+        <item>FORWARD</item>
+        <item>ANC/PASSTHROUGH</item>
+        <item>GSOUND_NOTIFY</item>
+    </string-array>
+    <string-array name="Triple_Click_Key_Action">
+        <item>BACKWARD</item>
+        <item>GSOUND_CANCEL</item>
+    </string-array>
+    <string-array name="Long_Press_Key_Action">
+        <item>WAKE_UP_SIRI</item>
+        <item>WAKE_UP_ALEXA</item>
+        <item>GSOUND_QUERY</item>
+    </string-array>
+    <string-array name="VA_Type">
+        <item>Google AI</item>
+        <item>Amazon Alexa</item>
+        <item>SIRI</item>
+        <item>Xiaowei AI</item>
+        <item>Xiaoai AI</item>
+    </string-array>
+    <string-array name="ANC_Filter_Control">
+        <item>Hybrid</item>
+        <item>FF</item>
+        <item>FB</item>
+    </string-array>
+    <string-array name="Hybrid_Passthrough_Filter_Control">
+        <item>Hybrid PassThrough</item>
+        <item>PassThrough</item>
+        <item>PassThrough FB</item>
+    </string-array>
+    <string-array name="Gesture">
+        <item>Single click on left</item>
+        <item>Single click on right</item>
+        <item>Double click on left</item>
+        <item>Double click on right</item>
+        <item>Long press on left</item>
+        <item>Long press on right</item>
+        <item>Triple click on left</item>
+        <item>Triple click on right</item>
+    </string-array>
+    <string-array name="Gesture_Action">
+        <item>Disable</item>
+        <item>Volume Up</item>
+        <item>Volume Down</item>
+        <item>ANC</item>
+        <item>Pass Through</item>
+        <item>Next Track</item>
+        <item>Previous Track</item>
+        <item>Play/Pause</item>
+        <item>Wake Up SIRI</item>
+        <item>Switch EQ</item>
+        <item>ANC / Passthrough</item>
+    </string-array>
+    <string-array name="LEA_BIS_ScanMode">
+        <item>First　　　　　　　　</item>
+        <item>Max RSSI　　　　　　</item>
+        <item>All　　　　　　　　　　</item>
+    </string-array>
+
+    <string name="on_off">ON/OFF</string>
+    <string name="reset">Reset</string>
+    <string name="onboarding_title_1">Nu Skool Audio Brand with playful.</string>
+    <string name="onboarding_title_2">Enjoy customizing for music</string>
+    <string name="onboarding_title_3">Keep your device up to date.</string>
+    <string name="onboarding_des_1">Layfic Tone is a new audio brand brought to you by USE Inc</string>
+    <string name="onboarding_des_2">Customize to your preference with sound quality tailored to your environment.</string>
+    <string name="onboarding_des_3">Please check for the latest firmware and information.</string>
+    <!--  Social network link  -->
+    <string name="instagram_link">https://www.instagram.com/layfictone_official/</string>
+    <string name="spotify_link">https://open.spotify.com/show/36InS0wrf8625omMYbOWxf</string>
+    <string name="x_link">https://twitter.com/Layfictone_Offi</string>
+    <string name="apple_podcast_link">https://podca
+
+        sts.apple.com/us/podcast/layfictone-sound-late-show/id1694920296</string>
+    <string name="facebook_link">https://www.facebook.com/LayficTone_official-110271295449253</string>
+    <string name="firmware_version">%s</string>
+    <string name="exit">To exit, please click the back button again.</string>
+
+    <string name="neabyTitle">Nearby Device permission required</string>
+    <string name="neabyContent">Starting from Android S (12.0), the system requires apps to be granted nearby device access in order to scan for BLE devices.\nYou can grant them in app settings.</string>
+
+    <string name="locationTitle">Location permission required</string>
+    <string name="locationContent">Starting from Android M (6.0), the system requires apps to be granted location access in order to scan for BLE devices.\nYou can grant them in app settings.</string>
+    <string name="show_tooltip">Show Tooltips</string>
+    <string name="list_device_title">Device Connection Guide</string>
+    <string name="connect_ble_devices">Open the settings app, select Bluetooth",then\nchoose The Industrial-ist Broadband and\nproceed with pairing.</string>
+    <string name="connect_ble_devices_success">The connection was successful</string>
+    <string name="start_connection_guide">Connection Guide</string>
+    <string name="connection_guide_content">Guide on how to connect the smartphone\nto The Industrial-ist Broadband</string>
+    <string name="next">Next</string>
+    <string name="start">Start</string>
+    <string name="device_power">Device Power</string>
+    <string name="device_power_content_guide">First, please press and hold the power\nbutton on both the left and right sides\nof the main unit. When the power is on,\nyou will hear a voice prompt.</string>
+    <string name="headphone_name">Bluetooth settings</string>
+    <string name="launch_setting_title">Launch settings app</string>
+    <string name="exit_guide_title">Exit the guide</string>
+    <string name="add_device">Add device</string>
+    <string name="user_guide">User Guide</string>
+    <string name="contact">Contact Us</string>
+    <string name="my_devices">My devices</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="eq_modes">EQ Modes</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>Hear-Thru
+    <string name="all_reset">ALL Reset</string>
+    <string name="hear_thru">Hear-Thru</string>
+    <string name="firmware">Firmware</string>
+    <string name="update">Update</string>
+    <string name="broadband">The Industrial-ist Broadband</string>
+    <string name="no_device_connected">No device connected</string>
+    <string name="tooltip_title1">The connected device will be displayed here.</string>
+    <string name="tooltip_title2">This is an equalizer preset. Please select your preferred sound quality and enjoy.</string>
+    <string name="tooltip_title3">Choosing CUSTOM allows you to manually adjust the sound quality balance.</string>
+    <string name="tooltip_title4">You can toggle the noise cancelling ON/OFF here.</string>
+    <string name="updateTitle">There is a new firmware update available: ver.1.00.09</string>
+</resources>

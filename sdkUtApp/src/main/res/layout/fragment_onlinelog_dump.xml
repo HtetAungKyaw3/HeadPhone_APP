@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#003C9D">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log Settings"
+                android:layout_margin="10dp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentLeft="true"
+                android:textSize="20dp" />
+            <Button
+                android:id="@+id/buttonShare"
+                android:layout_width="@android:dimen/app_icon_size"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:background="@drawable/button_share_style"
+                android:layout_margin="10dp"
+                android:layout_alignParentRight="true"
+                android:enabled="false"
+                android:text="" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:background="@drawable/rectangle_shape"
+                style="@style/MenuBlock">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Saved log path:"
+                        android:textSize="16dp" />
+                    <TextView
+                        android:id="@+id/textViewLogPath"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <Button
+                    android:background="@drawable/menu_button"
+                    style="@style/MenuButton"
+                    android:id="@+id/buttonGetBuildInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get Build Info."
+                    android:textSize="14dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <Switch
+                    style="@style/MenuButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switch_log_start"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="14dp"
+                    android:text="START LOGGING"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtLogCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#003C9D"
+                android:textColor="@color/colorWhite"
+                android:text="Log Package Count: 0"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#003C9D"
+            android:orientation="vertical">
+
+            <!--<ListView
+                android:id="@+id/txtDumpLog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlack"
+                android:textColor="@color/colorWhite"
+                android:gravity="bottom" />-->
+            <TextView
+                android:id="@+id/txtOnlineDumpLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#003C9D"
+                android:gravity="bottom"
+                android:textColor="@color/colorWhite"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/backgroundOpacityView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#5C000000" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/homeImageSliderHeight" />
+
+            <!--    Device Name-->
+            <TextView
+                android:id="@+id/tvDeviceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
+                android:background="#00000000"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="16dp"
+                android:padding="1dp"
+                android:textColor="@color/myTheme"
+                android:textSize="14sp"
+                tools:text="The Industrial-ist Broadband" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                app:tabIndicatorHeight="0dp"
+                app:tabPaddingEnd="1dp"
+                app:tabPaddingStart="1dp" />
+
+            <!--    ファームウェアアップデート-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNewVersion"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="8dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/updateContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_EDEDED"
+                    android:paddingHorizontal="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/updateBtn"
+                        android:layout_width="76dp"
+                        android:layout_height="34dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        app:cardCornerRadius="17dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <!--    update button-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/update"
+                            android:textColor="@color/myTheme"
+                            android:textSize="14sp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <!--    新しいファームウェアがあります...-->
+                    <TextView
+                        android:id="@+id/updateTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="#00000000"
+                        android:gravity="center_vertical"
+                        android:paddingEnd="14dp"
+                        android:text="@string/updateTitle"
+                        android:textColor="@color/myTheme"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/updateBtn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--    EQ Modes-->
+            <TextView
+                android:id="@+id/EQModeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:background="#00000000"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="21dp"
+                android:padding="1dp"
+                android:text="@string/eq_modes"
+                android:textColor="@color/myTheme"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <!-- EQ Buttons -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerEQMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <!--    MUSIC-->
+                <TextView
+                    android:id="@+id/tvModeMusic"
+                    style="@style/HomeEQModeButton"
+                    android:drawableStart="@drawable/button_image_music"
+                    android:text="MUSIC"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvModeWork"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tvModeMusic1"
+                    style="@style/HomeEQModeButton1"
+                    android:drawableStart="@drawable/button_image_music"
+                    android:text="MUSIC"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvModeWork"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--    WORK-->
+                <TextView
+                    android:id="@+id/tvModeWork"
+                    style="@style/HomeEQModeButton"
+                    android:drawableStart="@drawable/button_image_work"
+                    android:text="WORK"
+                    app:layout_constraintLeft_toRightOf="@id/tvModeMusic"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tvModeWork1"
+                    style="@style/HomeEQModeButton1"
+                    android:drawableStart="@drawable/button_image_work"
+                    android:text="WORK"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toRightOf="@id/tvModeMusic"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--    CHILL-->
+                <TextView
+                    android:id="@+id/tvModeChill"
+                    style="@style/HomeEQModeButton"
+                    android:drawableStart="@drawable/button_image_chill"
+                    android:text="CHILL"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvModeTheater"
+                    app:layout_constraintTop_toBottomOf="@id/tvModeMusic" />
+                <TextView
+                    android:id="@+id/tvModeChill1"
+                    style="@style/HomeEQModeButton1"
+                    android:drawableStart="@drawable/button_image_chill"
+                    android:text="CHILL"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvModeTheater"
+                    app:layout_constraintTop_toBottomOf="@id/tvModeMusic" />
+
+                <!--    THEATER-->
+                <TextView
+                    android:id="@+id/tvModeTheater"
+                    style="@style/HomeEQModeButton"
+                    android:drawableStart="@drawable/button_image_theater"
+                    android:text="THEATER"
+                    app:layout_constraintLeft_toRightOf="@id/tvModeChill"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvModeMusic" />
+                <TextView
+                    android:id="@+id/tvModeTheater1"
+                    style="@style/HomeEQModeButton1"
+                    android:drawableStart="@drawable/button_image_theater"
+                    android:text="THEATER"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toRightOf="@id/tvModeChill"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvModeMusic" />
+
+                <!--    CUSTOM 1-->
+                <TextView
+                    android:id="@+id/tvModeCustom1"
+                    style="@style/HomeEQModeButton"
+                    android:drawableStart="@drawable/button_image_custom1"
+                    android:text="CUSTOM 1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvModeCustom2"
+                    app:layout_constraintTop_toBottomOf="@id/tvModeChill" />
+                <TextView
+                    android:id="@+id/tvModeCustomA"
+                    style="@style/HomeEQModeButton1"
+                    android:drawableStart="@drawable/button_image_custom1"
+                    android:text="CUSTOM 1"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvModeCustom2"
+                    app:layout_constraintTop_toBottomOf="@id/tvModeChill" />
+
+                <!--    CUSTOM 2-->
+                <TextView
+                    android:id="@+id/tvModeCustom2"
+                    style="@style/HomeEQModeButton"
+                    app:layout_constraintCircleRadius="44dp"
+                    android:drawableStart="@drawable/button_image_custom2"
+                    android:text="CUSTOM 2"
+                    app:layout_constraintLeft_toRightOf="@id/tvModeCustom1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvModeChill" />
+                <TextView
+                    android:id="@+id/tvModeCustomB"
+                    style="@style/HomeEQModeButton1"
+                    app:layout_constraintCircleRadius="44dp"
+                    android:drawableStart="@drawable/button_image_custom2"
+                    android:text="CUSTOM 2"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toRightOf="@id/tvModeCustom1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvModeChill" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--    Custom EQ Waveform Area-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <!--    Lo-->
+                <TextView
+                    android:id="@+id/lo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:lineSpacingExtra="17dp"
+                    android:text="Lo"
+                    android:textColor="@color/inactive"
+                    android:textSize="15sp"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.25" />
+
+                <!--    Lo-m-->
+                <TextView
+                    android:id="@+id/loM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:lineSpacingExtra="17dp"
+                    android:text="Lo-m"
+                    android:textColor="@color/inactive"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@+id/lo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.25" />
+
+                <!--    Hi-m-->
+                <TextView
+                    android:id="@+id/hiM"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:lineSpacingExtra="17dp"
+                    android:text="Hi-m"
+                    android:textColor="@color/inactive"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@+id/loM"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.25" />
+
+                <!--    Hi-->
+                <TextView
+                    android:id="@+id/hi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:lineSpacingExtra="17dp"
+                    android:text="Hi"
+                    android:textColor="@color/inactive"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@+id/hiM"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.25" />
+
+                <!--    seekbar-->
+                <FrameLayout
+                    android:id="@+id/contentView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="450:280"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lo"
+                    app:layout_constraintWidth_percent="1.25" />
+                
+                <LinearLayout
+                    android:id="@+id/llEqControl"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@id/contentView"
+                    app:layout_constraintEnd_toEndOf="@+id/contentView"
+                    app:layout_constraintHeight_percent="0.85"
+                    app:layout_constraintStart_toStartOf="@+id/contentView"
+                    app:layout_constraintTop_toTopOf="@id/contentView">
+
+                    <!--    Lo-->
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                        android:id="@+id/wraperLo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:rotation="180">
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                            android:id="@+id/seekBar_lo"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@android:color/transparent"
+                            android:max="100"
+                            android:maxHeight="6dp"
+                            android:min="-100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/seekbar_style"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/thumb"
+                            app:seekBarRotation="CW90" />
+
+                        <View
+                            android:id="@+id/fill_lo"
+                            android:layout_width="6dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_seekbar_fill_view" />
+                    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                    <!--    Lo-m-->
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                        android:id="@+id/wraperLoM"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:rotation="180">
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                            android:id="@+id/seekBar_loM"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@android:color/transparent"
+                            android:max="100"
+                            android:maxHeight="6dp"
+                            android:min="-100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/seekbar_style"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/thumb"
+                            app:seekBarRotation="CW90" />
+
+                        <View
+                            android:id="@+id/fill_loM"
+                            android:layout_width="6dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_seekbar_fill_view" />
+                    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                    <!--    Hi-m-->
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                        android:id="@+id/wraperHiM"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:rotation="180">
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                            android:id="@+id/seekBar_hiM"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@android:color/transparent"
+                            android:max="100"
+                            android:maxHeight="6dp"
+                            android:min="-100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/seekbar_style"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/thumb"
+                            app:seekBarRotation="CW90" />
+
+                        <View
+                            android:id="@+id/fill_hiM"
+                            android:layout_width="6dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_seekbar_fill_view" />
+                    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+                    <!--    Hi-->
+                    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+                        android:id="@+id/wraperHi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:rotation="180">
+
+                        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                            android:id="@+id/seekBar_hi"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@android:color/transparent"
+                            android:max="100"
+                            android:maxHeight="6dp"
+                            android:min="-100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/seekbar_style"
+                            android:splitTrack="false"
+                            android:thumb="@drawable/thumb"
+                            app:seekBarRotation="CW90" />
+
+                        <View
+                            android:id="@+id/fill_hi"
+                            android:layout_width="6dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_seekbar_fill_view" />
+                    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--    Custom EQ Gain Label-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.2" />
+
+                <!--    tvLGain-->
+                <TextView
+                    android:id="@+id/tvLGain"
+                    style="@style/GainLabel"
+                    tools:text="--" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.25" />
+
+                <!--    tvLMGain-->
+                <TextView
+                    android:id="@+id/tvLMGain"
+                    style="@style/GainLabel"
+                    tools:text="--" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.25" />
+
+                <!--    tvHMGain-->
+                <TextView
+                    android:id="@+id/tvHMGain"
+                    style="@style/GainLabel"
+                    tools:text="--" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.25" />
+
+                <!--    tvHGain-->
+                <TextView
+                    android:id="@+id/tvHGain"
+                    style="@style/GainLabel"
+                    tools:text="--" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+
+            <!--    Custom EQ ON/OFF-->
+            <LinearLayout
+                android:id="@+id/llEQState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.2" />
+
+                <!--    ON/OFF tvLState-->
+                <TextView
+                    android:id="@+id/tvLState"
+                    style="@style/HomeEQStateButton"
+                    android:text="@string/on" />
+                <TextView
+                    android:id="@+id/tvLState1"
+                    android:visibility="gone"
+                    style="@style/HomeEQStateButton1"
+                    android:text="@string/on" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.25" />
+
+                <!--    ON/OFF tvLMState-->
+                <TextView
+                    android:id="@+id/tvLMState"
+                    style="@style/HomeEQStateButton"
+                    android:text="@string/on" />
+                <TextView
+                    android:id="@+id/tvLMState1"
+                    android:visibility="gone"
+                    style="@style/HomeEQStateButton1"
+                    android:text="@string/on" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.25" />
+
+                <!--    ON/OFF tvHMState-->
+                <TextView
+                    android:id="@+id/tvHMState"
+                    style="@style/HomeEQStateButton"
+                    android:text="@string/on" />
+                <TextView
+                    android:id="@+id/tvHMState1"
+                    style="@style/HomeEQStateButton1"
+                    android:visibility="gone"
+                    android:text="@string/on" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.25" />
+
+                <!--    ON/OFF tvHState-->
+                <TextView
+                    android:id="@+id/tvHState"
+                    style="@style/HomeEQStateButton"
+                    android:text="@string/on" />
+                <TextView
+                    android:id="@+id/tvHState1"
+                    style="@style/HomeEQStateButton1"
+                    android:visibility="gone"
+                    android:text="@string/on" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+
+            <!--    All Reset-->
+            <TextView
+                android:id="@+id/tvAllReset"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_eq_all_reset"
+                android:gravity="center"
+                android:paddingHorizontal="36dp"
+                android:text="@string/all_reset"
+                android:textColor="@color/color_eq_all_reset_border_and_text"
+                android:textSize="14sp" />
+
+            <!--    Hear-Thru-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="73dp"
+                android:layout_marginEnd="21dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="21dp"
+                    android:padding="1dp"
+                    android:text="@string/hear_thru"
+                    android:textColor="@color/myTheme"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchButton"
+                    style="@style/CustomToggleButton"
+                    android:backgroundTint="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@null" />
+            </LinearLayout>
+
+            <!--    Firmware-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginBottom="82dp"
+                android:gravity="center_vertical">
+
+                <!--    Firmware-->
+                <TextView
+                    style="@style/PrimaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/firmware" />
+
+                <!--    Firm Ver -->
+                <TextView
+                    android:id="@+id/tvFirmware"
+                    style="@style/PrimaryText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    tools:text="Firm Ver.1.0.03" />
+            </LinearLayout>
+        </LinearLayout> <!-- End body -->
+    </ScrollView>
+
+    <View
+        android:id="@+id/transparentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:background="#00000000" />
+</androidx.constraintlayout.widget.ConstraintLayout>

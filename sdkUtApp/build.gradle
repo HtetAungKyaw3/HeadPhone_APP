@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        jcenter{ url "https://jcenter.bintray.com/" }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    mavenLocal()
+    jcenter{ url "https://jcenter.bintray.com/" }
+    maven { url "https://jitpack.io" }
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.use.utapp.sdk"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        consumerProguardFiles 'consumer-rules.pro'
+        archivesBaseName = "Layfictone_v$versionName"
+
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../AndroidReleaseKey.jks")
+            storePassword "airohatest"
+            keyAlias "airohatest"
+            keyPassword "airohatest"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation ("com.google.code.gson:gson:2.8.6")
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    /// used in FiledTrial page
+    implementation fileTree(dir: 'libs/com.github.PhilJay', include: ['*.aar'])
+    /// file chooser (API < 29)
+    implementation 'com.github.angads25:filepicker:1.0.2'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation "com.androidplot:androidplot-core:1.5.10"
+    implementation 'com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0'
+    implementation 'com.karumi:dexter:6.2.2'
+    implementation 'it.sephiroth.android.library.targettooltip:target-tooltip-library:1.3.15'
+    implementation "com.airbnb.android:lottie:6.0.0"
+}

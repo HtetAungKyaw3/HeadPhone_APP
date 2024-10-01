@@ -1,0 +1,2334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Device Information"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Agent Channel:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textAgentChannel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Partner Channel:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textPartnerChannel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnCheckAgentChannel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:text="Check Channel" />
+
+                        <Button
+                            android:id="@+id/btnRoleSwitch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:text="Role Switch" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutIsTwsConnected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IsTwsConnected"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="IsTwsConnected:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewIsTwsConnected"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/btnIsTwsConnected"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Is Tws Connected" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A2DP Connection Status"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:stretchColumns="3">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textA2dpConnectionStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Phone Mac:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textA2dpPhoneAddr"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnGetA2dpConnectionStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Get A2dp Connection Status"/>
+                        </LinearLayout>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutGetDeviceInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GetDeviceInfo"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Vid:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewVid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Pid:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewPid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Mid:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewMid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="FW Ver:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewFwVer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="DeviceMAC:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewDeviceMAC"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="DeviceName:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewDeviceName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Role:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewRole"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Audio Channel:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewAudioChannel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="IsConnectable:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewIsConnectable"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="PreferredProtocol:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewPreferredProtocol"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="DeviceUid:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewDeviceUid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/btnGetDeviceInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Get Device Info" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutGetBatteryInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Battery"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Agnet Level: "
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:id="@+id/textViewAgentBattery"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Partner Level: "
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:id="@+id/textViewPartnerBattery"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnGetBatteryInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Get BatteryInfo" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutGetOtaStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GetOtaStatus"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="OTA Status:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewOtaStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/btnGetOtaStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Get Ota Status" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SetDeviceName"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/log_shape"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Device Name:"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                        <EditText
+                            android:id="@+id/editTextDeviceName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:maxLines="1"
+                            android:selectAllOnFocus="true"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="(The length must be less than 30 bytes)"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btnSetDeviceName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Set Device Name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutFindMyBuds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Find MyBuds"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Light On/Off:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <Switch
+                                android:id="@+id/switch_mmi_find_me_light_onoff"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:switchMinWidth="56dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Alert On/Off:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <Switch
+                                android:id="@+id/switch_mmi_find_me_alert_onoff"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:enabled="false"
+                                android:checked="true"
+                                android:switchMinWidth="56dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Action:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checkedButton="@id/radioButton_mmi_find_me_stop"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton_mmi_find_me_left"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Left" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton_mmi_find_me_right"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Right" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton_mmi_find_me_dual"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dual" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton_mmi_find_me_stop"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Stop" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnQueryFindMeState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Find My Buds" />
+
+                        <Button
+                            android:id="@+id/btnFindMe"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Set Find My Buds" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="VP"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:background="@drawable/log_shape"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonGetVpInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Get VP Info." />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinVpLanguage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/buttonSetVpIndex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Set Index" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MultiAI"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <Button
+                            android:id="@+id/buttonGetVaInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Get AI Status"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Spinner
+                                android:id="@+id/spinVaIndex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:entries="@array/VA_Type"/>
+
+                            <Button
+                                android:id="@+id/buttonSetVaIndex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Set AI Status"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gesture"
+                            android:textColor="#FFFFFF"
+                            android:layout_margin="10dp"
+                            android:textSize="20dp" />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:background="@drawable/log_shape"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:stretchColumns="3">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gesture:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+                                <Spinner
+                                    android:id="@+id/spinGesture"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:entries="@array/Gesture" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Action:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <Spinner
+                                    android:id="@+id/spinGestureAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:entries="@array/Gesture_Action" />
+                            </TableRow>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btnSetGesture"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="Set Gesture"/>
+
+                            </LinearLayout>
+                        </TableLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Left Channel"
+                            android:textSize="16dp" />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:background="@drawable/log_shape"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:stretchColumns="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btnGetLeftGesture"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="Get Left All Gesture"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btnResetLeftGesture"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="Reset Left All Gesture"/>
+
+                            </LinearLayout>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Single Click:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textLeftSingleClickGestureAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Double Click:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/textLeftDoubleClickGestureAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Long Press:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/textLeftLongPressGestureAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Triple Click:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/textLeftTripleClickGestureAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"/>
+                            </TableRow>
+
+                        </TableLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Right Channel"
+                            android:textSize="16dp" />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:background="@drawable/log_shape"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:stretchColumns="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btnGetRightGesture"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="Get Right All Gesture"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/btnResetRightGesture"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="Reset Right All Gesture"/>
+
+                            </LinearLayout>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Single Click:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textRightSingleClickGestureAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Double Click:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/textRightDoubleClickGestureAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Long Press:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/textRightLongPressGestureAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Triple Click:"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/textRightTripleClickGestureAction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"/>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAutoPlayPause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto Play Pause\n(Need FW/HW Support)"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonMmiAutoPlayPauseOn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="@android:drawable/btn_radio"
+                                    android:text="ON"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButtonMmiAutoPlayPauseOff"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="@android:drawable/btn_radio"
+                                    android:text="OFF"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnGetAutoPlayPauseStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Auto Play Pause Status"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAncStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ANC"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:stretchColumns="1">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="ANC Filter1"
+                                    android:textSize="16sp"
+                                    android:gravity="center_vertical"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton_mmi_anc_filter1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:button="@null"
+                                        android:drawableRight="@android:drawable/btn_radio"
+                                        android:textSize="16sp"
+                                        android:textAlignment="textEnd"/>
+                                </LinearLayout>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="ANC Filter2"
+                                    android:textSize="16sp"
+                                    android:gravity="center_vertical"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton_mmi_anc_filter2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:button="@null"
+                                        android:drawableRight="@android:drawable/btn_radio"
+                                        android:textSize="16sp"
+                                        android:textAlignment="textEnd"/>
+                                </LinearLayout>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="ANC Filter3"
+                                    android:textSize="16sp"
+                                    android:gravity="center_vertical"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton_mmi_anc_filter3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:button="@null"
+                                        android:drawableRight="@android:drawable/btn_radio"
+                                        android:textSize="16sp"
+                                        android:textAlignment="textEnd"/>
+                                </LinearLayout>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="ANC Filter4"
+                                    android:textSize="16sp"
+                                    android:gravity="center_vertical"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton_mmi_anc_filter4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:button="@null"
+                                        android:drawableRight="@android:drawable/btn_radio"
+                                        android:textSize="16sp"
+                                        android:textAlignment="textEnd"/>
+                                </LinearLayout>
+                            </TableRow>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_hybrid_passthru"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Hybrid PassThrough1"
+                                        android:textSize="16sp"
+                                        android:gravity="center_vertical"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right">
+
+                                        <RadioButton
+                                            android:id="@+id/radioButton_mmi_hybrid_passthru1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:button="@null"
+                                            android:drawableRight="@android:drawable/btn_radio"
+                                            android:textSize="16dp"
+                                            android:textAlignment="viewEnd"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Hybrid PassThrough2"
+                                        android:textSize="16sp"
+                                        android:gravity="center_vertical"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right">
+
+                                        <RadioButton
+                                            android:id="@+id/radioButton_mmi_hybrid_passthru2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:button="@null"
+                                            android:drawableRight="@android:drawable/btn_radio"
+                                            android:textSize="16dp"
+                                            android:textAlignment="viewEnd"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Hybrid PassThrough3"
+                                        android:textSize="16sp"
+                                        android:gravity="center_vertical"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right">
+
+                                        <RadioButton
+                                            android:id="@+id/radioButton_mmi_hybrid_passthru3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:button="@null"
+                                            android:drawableRight="@android:drawable/btn_radio"
+                                            android:textSize="16dp"
+                                            android:textAlignment="viewEnd"/>
+                                    </LinearLayout>
+                                </TableRow>
+
+                            </LinearLayout>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Pass Through1"
+                                    android:textSize="16sp"
+                                    android:gravity="center_vertical"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton_mmi_pass_through1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:button="@null"
+                                        android:drawableRight="@android:drawable/btn_radio"
+                                        android:textSize="16dp" />
+                                </LinearLayout>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Pass Through2"
+                                    android:textSize="16sp"
+                                    android:gravity="center_vertical"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton_mmi_pass_through2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:button="@null"
+                                        android:drawableRight="@android:drawable/btn_radio"
+                                        android:textSize="16dp" />
+                                </LinearLayout>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Pass Through3"
+                                    android:textSize="16sp"
+                                    android:gravity="center_vertical"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton_mmi_pass_through3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:button="@null"
+                                        android:drawableRight="@android:drawable/btn_radio"
+                                        android:textSize="16dp" />
+                                </LinearLayout>
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="ANC Off"
+                                    android:textSize="16sp"
+                                    android:gravity="center_vertical"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton_mmi_anc_pt_off"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:button="@null"
+                                        android:drawableRight="@android:drawable/btn_radio"
+                                        android:textSize="16dp" />
+                                </LinearLayout>
+                            </TableRow>
+                        </TableLayout>
+                        <LinearLayout
+                            android:id="@+id/linearLayout_mmi_realtime_anc_gain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/log_shape"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="RealTime ANC Gain"
+                                android:textSize="16dp" />
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_anc_bar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatSeekBar
+                                    android:id="@+id/seekBar_anc_gain"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="12"
+                                    android:enabled="false"
+                                    android:progress="2000"
+                                    android:max="2000"/>
+
+                                <TextView
+                                    android:id="@+id/textView_anc_gain"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:text="0.00" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="dB" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearLayout_mmi_realtime_passthru_gain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/log_shape"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:text="RealTime Pass Through Gain"
+                                android:textSize="16dp" />
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout_passthru_bar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatSeekBar
+                                    android:id="@+id/seekBar_passthru_gain"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="12"
+                                    android:enabled="false"
+                                    android:progress="2000"
+                                    android:max="2000"/>
+
+                                <TextView
+                                    android:id="@+id/textView_passthru_gain"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:text="0.00" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="dB" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buttonGetAncStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="Get ANC SETTING" />
+
+                        <Button
+                            android:id="@+id/buttonSaveAncStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:enabled="false"
+                            android:text="SAVE ANC SETTING" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAutoPowerOff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto Power Off"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Power Off Interval(minute): "/>
+                            <EditText
+                                android:id="@+id/editTextAutoPowerOffInterval"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:maxLines="1"
+                                android:ems="30"
+                                android:maxLength="3"
+                                android:inputType="numberDecimal"
+                                android:selectAllOnFocus="true"
+                                android:digits="0123456789"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnGetAutoPowerOffStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Auto Power Off Status"/>
+
+                        <Button
+                            android:id="@+id/btnSetAutoPowerOffStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:text="Set Auto Power Off Status"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutSealingStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sealing Status"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutSealingStatusWithMusic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/rectangle_shape">
+
+                        <CheckBox
+                            android:id="@+id/ckbSealingStatusWithMusic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Music:" />
+
+                        <EditText
+                            android:id="@+id/editTextSealingStatusMusicPath"
+                            android:enabled="false"
+                            android:layout_weight="10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <Button
+                            android:id="@+id/buttonSealingStatusMusicPathFilePicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_selector"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:text="..." />
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:stretchColumns="3">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textSealingStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"/>
+                        </TableRow>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnGetSeakingStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Get Sealing Status"/>
+                        </LinearLayout>
+                    </TableLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutLowLatencyStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Low Latency"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_mmi_normal_mode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:text="Normal Mode"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_mmi_game_mode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:text="Low Latency Mode"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </RadioGroup>
+
+                        <Button
+                            android:id="@+id/btnGetSmartSwitchStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Latency Status"/>
+
+                        <Button
+                            android:id="@+id/btnSetSmartSwitchStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:text="Set Latency Status"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutShareMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share Mode"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_mmi_share_mode_off"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:text="Share Mode: OFF"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_mmi_share_mode_agent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:text="Share Mode: Agent"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_mmi_share_mode_follower"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:text="Share Mode: Follower"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Share Mode State:"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/textViewShareModeState"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnGetShareModeState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Share Mode State"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutTouchStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Touch Status"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton_touch_enable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="@android:drawable/btn_radio"
+                                    android:text="Enable"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton_touch_disable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="@android:drawable/btn_radio"
+                                    android:text="Disable"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnGetTouchStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Touch Status"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutSidetoneState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sidetone State"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:id="@+id/radioButtonMmiSidetoneOn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:text="ON"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonMmiSidetoneOff"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:text="OFF"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SidetoneLevel: "/>
+                            <EditText
+                                android:id="@+id/editTextSidetoneLevel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:layout_weight="1"
+                                android:text=""
+                                android:maxLines="1"
+                                android:ems="30"
+                                android:maxLength="4"
+                                android:inputType="numberDecimal"
+                                android:selectAllOnFocus="true"
+                                android:digits="-0123456789"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnGetSidetoneState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Sidetone State"/>
+
+                        <Button
+                            android:id="@+id/btnSetSidetoneState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Set Sidetone State"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutAdvancedPassthroughStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Advanced Passthrough Status"
+                        android:textColor="#FFFFFF"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/log_shape"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton_advanced_passthrough_enable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="@android:drawable/btn_radio"
+                                    android:text="Enable"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton_advanced_passthrough_disable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:button="@null"
+                                    android:drawableRight="@android:drawable/btn_radio"
+                                    android:text="Disable"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btnGetAdvancedPassthroughStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Get Advanced Passthrough Status"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

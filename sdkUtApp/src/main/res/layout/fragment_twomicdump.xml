@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#003C9D">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dump Settings"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    style="@style/MenuBlock"
+                    android:background="@drawable/rectangle_shape">
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/buttonStartAirDump"
+                        android:text="Start Dump" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/buttonStopAirDump"
+                        android:text="Stop Dump" />
+
+                </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt2MicDumpLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="bottom" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

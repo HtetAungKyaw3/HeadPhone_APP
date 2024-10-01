@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#003C9D">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dump Info."
+                android:layout_margin="20dp"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentLeft="true"
+                android:textSize="20dp" />
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="@android:dimen/app_icon_size"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:background="@drawable/button_share_style"
+                android:layout_margin="10dp"
+                android:layout_alignParentRight="true"
+                android:enabled="false"
+                android:text="" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/log_shape"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Saved log path:"
+                    android:textSize="16dp" />
+                <TextView
+                    android:id="@+id/textViewLogPath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Boot Reason:"
+                    android:textSize="16dp" />
+                <TextView
+                    android:id="@+id/textViewBootReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Minidump Info:"
+                    android:textSize="16dp" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgMinidumpCheck"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_dump_pass">
+                </androidx.appcompat.widget.AppCompatImageView>
+                <TextView
+                    android:id="@+id/textViewMinidump"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Exception Log Info:"
+                    android:textSize="16dp" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgExceptionCheck"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_dump_pass">
+                </androidx.appcompat.widget.AppCompatImageView>
+                <TextView
+                    android:id="@+id/textViewExceptionLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Offline Log Info:"
+                    android:textSize="16dp" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgOfflineCheck"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_dump_pass">
+                </androidx.appcompat.widget.AppCompatImageView>
+                <TextView
+                    android:id="@+id/textViewOfflinelog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log On/Off Status Settings"
+                android:textColor="#FFFFFF"
+                android:layout_margin="20dp"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:background="@drawable/rectangle_shape"
+                style="@style/MenuBlock">
+
+                <Switch
+                    android:visibility="gone"
+                    style="@style/MenuButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switch_offlinelog_onoff"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="14dp"
+                    android:text="Offline Log On/Off (Please wait until device reboot)"/>
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+                <Switch
+                    style="@style/MenuButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switch_minidump_onoff"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="14dp"
+                    android:text="Minidump On/Off (Please wait until device reboot)"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dump Settings"
+                android:textColor="#FFFFFF"
+                android:layout_margin="20dp"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                style="@style/MenuBlock"
+                android:background="@drawable/rectangle_shape">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Make assert for minidump and exception log"/>
+                    <Button
+                        style="@style/SettingButton"
+                        android:id="@+id/buttonAssert"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:background="@drawable/button_selector"
+                        android:text="Assert" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Trigger offline log dump to flash"/>
+                    <Button
+                        style="@style/SettingButton"
+                        android:id="@+id/buttonTriggerLog"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:background="@drawable/button_selector"
+                        android:text="Trigger" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Get dump address and length in flash"/>
+                    <Button
+                        style="@style/SettingButton"
+                        android:id="@+id/buttonGetReason"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:background="@drawable/button_selector"
+                        android:text="Get" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Start to dump minidump/exception log/offline log"/>
+                    <Button
+                        style="@style/SettingButton"
+                        android:id="@+id/buttonStartDump"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:background="@drawable/button_selector"
+                        android:text="Start" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewReadInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="200pt"
+                android:background="#003C9D"
+                android:textColor="@color/colorWhite"
+                android:gravity="bottom" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

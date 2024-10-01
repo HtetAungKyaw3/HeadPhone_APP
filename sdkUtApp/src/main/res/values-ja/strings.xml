@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exit">終了するにはもう一度バックボタンをクリックしてください</string>
+    <string name="neabyTitle">Nearby Device permission required</string>
+    <string name="neabyContent">Starting from Android S (12.0), the system requires apps to be granted nearby device access in order to scan for BLE devices.\nYou can grant them in app settings.</string>
+    <string name="locationTitle">Location permission required</string>
+    <string name="locationContent">Starting from Android M (6.0), the system requires apps to be granted location access in order to scan for BLE devices.\nYou can grant them in app settings.</string>
+    <string name="show_tooltip">チュートリアル</string>
+    <string name="list_device_title">デバイス接続ガイド</string>
+    <string name="onboarding_title_1">Nu Skoolの遊び心あるオーディオブランド。</string>
+    <string name="onboarding_title_2">音楽をカスタマイズしてお楽しみください。</string>
+    <string name="onboarding_title_3">デバイスを最新の状態に保ちましょう。</string>
+    <string name="connect_ble_devices">設定アプリを開いて”Bluetooth”を選\n択し、The Industrial-ist \nBroadbandを選択してペアリングし\nてください。</string>
+    <string name="onboarding_des_1">Layfic ToneはUSE Inc.がお届けする新しい音響ブランドです。</string>
+    <string name="onboarding_des_2">使用環境に合わせた音質で あなた好みにカスタマイズしましょう。</string>
+    <string name="onboarding_des_3">最新のファームウェアやインフォメーションを チェックしてください。</string>
+    <string name="headphone_name">Bluetoothの設定</string>
+    <string name="launch_setting_title">設定アプリを起動</string>
+    <string name="exit_guide_title">ガイドを終了</string>
+    <string name="connect_ble_devices_success">接続に成功しました</string>
+    <string name="start_connection_guide">接続ガイド</string>
+    <string name="connection_guide_content">スマートフォンとThe Industrial-ist \nBroadband を接続する方法をガイド\nします</string>
+    <string name="next">次へ</string>
+    <string name="start">はじめる</string>
+    <string name="device_power">デバイスの電源</string>
+    <string name="device_power_content_guide">最初に、本体左右両耳の電源ボタン\nを長押ししてください。電源がONに\nなると音声が再生されます。</string>
+    <string name="add_device">デバイスを追加</string>
+    <string name="user_guide">ユーザーガイド</string>
+    <string name="contact">お問合せ</string>
+    <string name="my_devices">私のデバイス</string>
+    <string name="disconnected">切断されました</string>
+    <string name="eq_modes">EQモード</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="all_reset">全てリセット</string>
+    <string name="hear_thru">聴くスル</string>
+    <string name="firmware">ファームウェア</string>
+    <string name="update">更新</string>
+    <string name="broadband">インダストリアリスト・ブロードバンド</string>
+    <string name="no_device_connected">デバイスが接続されていません</string>
+    <string name="tooltip_title1">接続中のデバイスがここに表示されます。</string>
+    <string name="tooltip_title2">イコライザーのプリセットです。お好みの音質を選んでお楽しみください。</string>
+    <string name="tooltip_title3">CUSTOMを選ぶと手動で音質バランスを変更できます。</string>
+    <string name="tooltip_title4">ノイズキャンセリングのON/OFFをこちらで行えます</string>
+    <string name="updateTitle">新しいファームウェアアップデートがあります ver.1.00.09</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbarHeight">40dp</dimen>
+    <dimen name="defaultStatusBarHeight">27dp</dimen>
+    <dimen name="socicalIconSize">32dp</dimen>
+    <dimen name="dimen_11dp">11dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="homeEqModeDrawablePadding">30dp</dimen>
+    <dimen name="homeImageSliderHeight">86dp</dimen>
+</resources>

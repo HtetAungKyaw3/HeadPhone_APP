@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:id="@+id/frContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintToolbar" />
+
+        <!--        progress bar-->
+        <RelativeLayout
+            android:id="@+id/rlLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#AEFFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                app:lottie_rawRes="@raw/progress"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+        </RelativeLayout>
+
+        <!--        disconnect-->
+        <TextView
+            android:id="@+id/tvDisConnect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_EDEDED_40"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="36dp"
+            android:paddingTop="92dp"
+            android:text="@string/disconnected"
+            android:textColor="@color/blue_001E78"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!--        top banner-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbarHeight"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--            menu-->
+            <ImageView
+                android:id="@+id/imgMenuIcon"
+                android:layout_width="@dimen/toolbarHeight"
+                android:layout_height="@dimen/toolbarHeight"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_menu"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/toolbarHeight"
+                android:text="@string/my_devices"
+                android:textColor="@color/blue_001E78"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--  Left side menu  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/tvAddDevice"
+            style="@style/AddDeviceButton"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="42dp"
+            android:clipToPadding="false"
+            android:paddingBottom="42dp"
+            app:layout_constraintBottom_toTopOf="@id/imgInstagram"
+            app:layout_constraintTop_toBottomOf="@id/tvAddDevice">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="42dp">
+
+                <TextView
+                    style="@style/PrimaryTextBold16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_link"
+                    android:drawablePadding="8dp"
+                    android:text="@string/user_guide"
+                    android:textSize="18dp" />
+
+                <TextView
+                    style="@style/PrimaryTextBold16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp"
+                    android:drawableRight="@drawable/ic_link"
+                    android:drawablePadding="8dp"
+                    android:text="@string/contact"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tvShowTooltip"
+                    style="@style/PrimaryTextBold16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46dp"
+                    android:drawablePadding="8dp"
+                    android:text="@string/show_tooltip"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imgInstagram"
+            style="@style/SocialIcon"
+            android:layout_marginStart="59dp"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/ic_instagram"
+            app:layout_constraintBottom_toTopOf="@id/tvCopyRight"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imgX"
+            style="@style/SocialIcon"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/ic_x"
+            app:layout_constraintLeft_toRightOf="@id/imgInstagram"
+            app:layout_constraintRight_toLeftOf="@id/imgSpotify"
+            app:layout_constraintTop_toTopOf="@id/imgInstagram" />
+
+        <ImageView
+            android:id="@+id/imgSpotify"
+            style="@style/SocialIcon"
+            android:layout_marginEnd="59dp"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/ic_spotify"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgInstagram" />
+
+        <TextView
+            android:id="@+id/tvCopyRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:text="©︎Layfictone USE Inc."
+            android:textColor="@color/blue_001E78"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/verNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:text="v0.0.0"
+            android:textColor="@color/blue_001E78"
+            android:textSize="9dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCopyRight"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

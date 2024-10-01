@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#003C9D">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connection"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:background="@drawable/rectangle_shape"
+                    style="@style/MenuBlock">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radioButton_PHY_SPP"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:text="SPP"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/radioButton_PHY_BLE"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:visibility="gone"
+                                android:text="BLE"
+                                android:textStyle="bold" />
+                        </RadioGroup>
+                        <Button
+                            android:id="@+id/btnSetUUID"
+                            android:background="@drawable/button_selector"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:enabled="false"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:text="UUID"/>
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btnConnect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/button_selector"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:text="CONNECT"
+                        android:textSize="14dp"
+                        android:enabled="false"/>
+
+                    <Button
+                        android:id="@+id/btnDisconnect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/corner_shape_enable"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textSize="14dp"
+                        android:text="DISCONNECT"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FOTA APP"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:background="@drawable/rectangle_shape"
+                    style="@style/MenuBlock">
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btn155xOneClickSingle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:text="Single FOTA Demo" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btn155xOneClickMCSync"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:text="MCSync FOTA Demo" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnSingleFota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_single_fota"
+                        android:text="   Headset FOTA UT" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnTwsFota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_tws_fota"
+                        android:text="   TWS FOTA UT" />
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Config. APP"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:background="@drawable/rectangle_shape"
+                    style="@style/MenuBlock">
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnPeqUt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_eq"
+                        android:enabled="false"
+                        android:text="   PEQ UT" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnMmiUt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_mmi"
+                        android:text="   MMI UT" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnKeyActionUt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_key_event"
+                        android:text="   Key Action UT" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnEnvironmentDetection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:drawableLeft="@drawable/icon_mmi"
+                        android:text="   Environment Detection UT" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnAncUserTrigger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:drawableLeft="@drawable/icon_mmi"
+                        android:text="   ANC User Trigger" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnEmpUt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:drawableLeft="@drawable/icon_key_event"
+                        android:text="   EMP UT" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnLeAudioUt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:drawableLeft="@drawable/icon_mmi"
+                        android:text="   LE Audio UT" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnLeAudioBIS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:drawableLeft="@drawable/icon_antenna"
+                        android:text="   LE Audio BIS" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Debugging APP"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:background="@drawable/rectangle_shape"
+                    style="@style/MenuBlock">
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnOneClickDump"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_share_black"
+                        android:text="   Dump Log And Zip To Share" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnAntennaUt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_antenna"
+                        android:text="   Field Trial" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnTwoMicDump"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_debug"
+                        android:text="   Two Mic Dump"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnAncDump"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_debug"
+                        android:text="   Anc Dump"/>
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnLogConfig"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_offline"
+                        android:text="   Log Config" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"/>
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnMiniDump"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_debug"
+                        android:text="   Exception Dump" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnOnlineDump"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/icon_online"
+                        android:text="   Online Log" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnRestoreNVR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:drawableLeft="@drawable/icon_nvr"
+                        android:text="   Restore NVR" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <Button
+                        android:background="@drawable/menu_button"
+                        style="@style/MenuButton"
+                        android:id="@+id/btnCustomCmd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:drawableLeft="@drawable/icon_custom_cmd"
+                        android:text="   Custom Command" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

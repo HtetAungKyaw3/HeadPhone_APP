@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/FWDialogDim">
+
+    <!--    popup-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/FWDialogCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/firmware_popup_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.69"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.83">
+
+        <!--    top guide line-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <!--    top guide line2-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGuideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <!--    top guide line3-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGuideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.62" />
+
+        <!--    bottom guide line-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <!--    ファームウェアアップデート-->
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/FWDialogTittle"
+            android:text="ファームウェアアップデート\nが完了しました"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/topGuideline" />
+
+        <!--    check-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/icon_check"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/topGuideline2" />
+
+        <!--    DeviceName-->
+        <TextView
+            android:id="@+id/tvDeviceName"
+            style="@style/PrimaryTextBold16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Industrial-ist Broadband"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/topGuideline3" />
+
+        <TextView
+            android:id="@+id/tvNewVersion"
+            style="@style/PrimaryText16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Ver.1.0.04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDeviceName" />
+
+        <!--    OK button-->
+        <TextView
+            android:id="@+id/tvOK"
+            style="@style/FWDialogPrimaryButton"
+            android:text="OK"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

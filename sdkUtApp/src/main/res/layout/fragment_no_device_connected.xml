@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_device_connected"
+        android:textColor="@color/blue_001E78"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/imgX"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAddDevice"
+        style="@style/AddDeviceButton"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+    <ImageView
+        android:id="@+id/imgX"
+        style="@style/SocialIcon"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgInstagram"
+        style="@style/SocialIcon"
+        android:layout_marginEnd="58dp"
+        android:src="@drawable/ic_instagram"
+        app:layout_constraintRight_toLeftOf="@id/imgX"
+        app:layout_constraintTop_toTopOf="@id/imgX" />
+
+    <ImageView
+        android:id="@+id/imgSpotify"
+        style="@style/SocialIcon"
+        android:layout_marginStart="58dp"
+        android:src="@drawable/ic_spotify"
+        app:layout_constraintLeft_toRightOf="@id/imgX"
+        app:layout_constraintTop_toTopOf="@id/imgX" />
+</androidx.constraintlayout.widget.ConstraintLayout>

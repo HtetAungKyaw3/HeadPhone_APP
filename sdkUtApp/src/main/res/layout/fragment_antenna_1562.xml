@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#003C9D"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Report Time(s):"
+                android:textSize="12dp"/>
+
+            <Spinner
+                android:id="@+id/rpt_time_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/AntennaUT_rpt_time"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Test Device:"
+                android:textSize="12dp" />
+
+            <Spinner
+                android:id="@+id/test_role_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/AntennaUT_test_role"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_enable_statistics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:text="Enable Statistics" />
+
+            <EditText
+                android:id="@+id/edit_statistics_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="1234567890"
+                android:maxLength="4"
+                android:textSize="12dp"
+                android:text="100" />
+
+            <CheckBox
+                android:id="@+id/cb_get_A2dp_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="12dp"
+                android:text="Get A2DP Info in Loop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:paddingHorizontal="5dp">
+
+            <Button
+                android:id="@+id/buttonStartAntennaUT"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="Start"
+                android:textSize="14dp"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/buttonGetA2dpInfo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="Get Nvkey"
+                android:textSize="14dp"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/buttonStopAntennaUT"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:text="Stop"
+                android:textSize="14dp"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/log_shape"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView_AgentStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:textColor="@color/colorWhite"/>
+            <TextView
+                android:id="@+id/textView_PartnerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/listView_agent_log"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@drawable/log_shape"
+                android:stackFromBottom="true"
+                android:transcriptMode="alwaysScroll" />
+
+            <ListView
+                android:id="@+id/listView_partner_log"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@drawable/log_shape"
+                android:stackFromBottom="true"
+                android:transcriptMode="alwaysScroll" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

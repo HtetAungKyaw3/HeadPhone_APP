@@ -1,0 +1,268 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myTheme</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="FullScreen" parent="@style/AppTheme">
+        <!--        <item name="android:windowNoTitle">true</item>-->
+        <!--        <item name="android:windowActionBar">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <style name="CustomProgressBarHorizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:minHeight">20dip</item>
+        <item name="android:maxHeight">30dip</item>
+    </style>
+
+    <style name="progressBarBlue" parent="@style/Theme.AppCompat">
+        <item name="colorAccent">#5599FF</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="PassDialogStyle" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/Base.Animation.AppCompat.Dialog</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textColor">#00FF00</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColorPrimary">#00FF00</item>
+    </style>
+
+    <style name="MenuButton">
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SettingButton">
+        <item name="android:background">#C4E1FF</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MenuBlock">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="ConfigButton">
+        <item name="android:background">#FFAA33</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="AppTheme.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:background">@color/colorBlack</item>
+        <item name="tabIndicatorColor">@color/colorWhite</item>
+    </style>
+
+    <!--    <style name="btnStyle">-->
+    <!--        <item name="android:layout_width">wrap_content</item>-->
+    <!--        <item name="android:layout_height">wrap_content</item>-->
+    <!--        <item name="android:text">10sp</item>-->
+    <!--    </style>-->
+
+    <style name="mySeek">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:max">2400</item>
+        <item name="android:progress">1200</item>
+        <item name="android:minHeight">5dp</item>
+        <item name="android:maxHeight">10dp</item>
+        <item name="android:thumbOffset">0dp</item>
+        <item name="android:progressDrawable">@drawable/sq_seekbar_clipped</item>
+        <item name="android:thumb">@drawable/my_thumb_1</item>
+    </style>
+
+    <style name="AddDeviceButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">42dp</item>
+        <item name="android:paddingLeft">22dp</item>
+        <item name="android:paddingRight">28dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:drawableLeft">@drawable/ic_plus</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_primary_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:text">@string/add_device</item>
+    </style>
+
+    <style name="PrimaryText">
+        <item name="android:textColor">@color/blue_001E78</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="SocialIcon">
+        <item name="android:layout_width">@dimen/socicalIconSize</item>
+        <item name="android:layout_height">@dimen/socicalIconSize</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="FullScreenGraph">
+        <item name="graphMarginTop">0dp</item>
+        <item name="graphMarginBottom">0dp</item>
+        <item name="graphMarginLeft">0dp</item>
+        <item name="graphMarginRight">0dp</item>
+        <item name="graphHeightMode">fill</item>
+        <item name="graphWidthMode">fill</item>
+        <item name="graphHeight">0</item>
+        <item name="graphWidth">0</item>
+        <item name="domainLineThickness">1dp</item>
+        <item name="graphHorizontalPositioning">absolute_from_left</item>
+        <item name="graphVerticalPositioning">absolute_from_top</item>
+        <item name="rangeLineThickness">0.5dp</item>
+        <item name="graphAnchor">left_top</item>
+        <item name="graphHorizontalPosition">0dp</item>
+        <item name="graphVerticalPosition">0dp</item>
+        <item name="legendVisible">false</item>
+    </style>
+
+    <style name="PrimaryText16dp" parent="PrimaryText">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="PrimaryTextBold16dp" parent="PrimaryText16dp">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--  Home  -->
+    <style name="HomeEQModeButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:drawablePadding">@dimen/homeEqModeDrawablePadding</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">6dp</item>
+        <item name="autoSizeMaxTextSize">14dp</item>
+        <item name="autoSizeStepGranularity">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/bg_eq_mode_button</item>
+        <item name="android:textColor">@color/color_eq_mode_button_text</item>
+        <item name="layout_constraintWidth_percent">0.44</item>
+    </style>
+    <style name="HomeEQModeButton1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:drawablePadding">@dimen/homeEqModeDrawablePadding</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">6dp</item>
+        <item name="autoSizeMaxTextSize">14dp</item>
+        <item name="autoSizeStepGranularity">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/bg_eq_mode_button_highlight</item>
+        <item name="android:textColor">@color/color_eq_mode_button_text_highlight</item>
+        <item name="layout_constraintWidth_percent">0.44</item>
+    </style>
+
+    <style name="HomeEQStateButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_eq_state_button</item>
+        <item name="android:textColor">@color/color_eq_mode_button_text</item>
+    </style>
+
+    <style name="HomeEQStateButton1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bq_eq_state_button_highlight</item>
+        <item name="android:textColor">@color/color_eq_mode_button_text_highlight</item>
+    </style>
+
+    <style name="GainLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_gain_label_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--  End Home  -->
+    <!--  FW Update Dialog  -->
+
+    <style name="FWDialogDim">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#80000000</item>
+    </style>
+
+    <style name="FWDialogCardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="cardCornerRadius">18dp</item>
+        <item name="cardElevation">2dp</item>
+    </style>
+
+    <style name="FWDialogTittle" parent="PrimaryText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="FWDialogPrimaryButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="layout_constraintWidth_percent">0.71</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_primary_button_radius_26</item>
+    </style>
+
+    <style name="FWDialogSecondaryButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="layout_constraintWidth_percent">0.71</item>
+        <item name="android:textColor">@color/blue_001E78</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/bg_secondary_button_radius_26</item>
+    </style>
+    <!--  End FW Update Dialog  -->
+
+    <style name="ProgressDialogStyle" parent="AppTheme">
+        <item name="colorAccent">@color/blue_001E78</item>
+    </style>
+
+    <style name="CustomToggleButton">
+        <item name="thumbTint">@color/color_thumb</item>
+        <item name="trackTint">@color/color_track</item>
+    </style>
+</resources>

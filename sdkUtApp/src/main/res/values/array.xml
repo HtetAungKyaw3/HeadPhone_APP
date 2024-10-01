@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="home_button_textsize">
+        <item>14sp</item>
+        <item>12sp</item>
+        <item>10sp</item>
+        <item>8sp</item>
+    </array>
+</resources>

@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.airoha.utapp.sdk"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        consumerProguardFiles 'consumer-rules.pro'
+        vectorDrawables.useSupportLibrary = true
+
+        archivesBaseName = "AirohaUnifySDK_UT-v$versionName"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../AndroidReleaseKey.jks")
+            storePassword "airohatest"
+            keyAlias "airohatest"
+            keyPassword "airohatest"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation ("com.google.code.gson:gson:2.8.6")
+
+    /// used in FiledTrial page
+    implementation fileTree(dir: 'libs/com.github.PhilJay', include: ['*.aar'])
+
+    /// file chooser (API < 29)
+    implementation 'com.github.angads25:filepicker:1.0.2'
+
+    implementation project(path: ':libLogger')
+    implementation project(path: ':libBase')
+    implementation project(path: ':sdk')
+    implementation project(path: ':libUtils')
+    implementation project(path: ':libLinker')
+
+    // used in RestoreNvrFragment
+    implementation project(path: ':libMgrMmi')
+    implementation project(path: ':libMgrMmi1562')
+    implementation project(path: ':libMgrMmi1568')
+    implementation project(path: ':libMgrCommon')
+    implementation project(path: ':libMgrFota1562')
+    implementation project(path: ':libMgrLogDump1562')
+    implementation project(path: ':libMgrMmi158x')
+    implementation project(path: ':libMgrAnc')
+}
